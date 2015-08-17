@@ -1,0 +1,10 @@
+[Unit]
+Description=The TPM emulator daemon
+After=sysinit.target
+
+[Service]
+User=root
+ExecStart=/usr/bin/tpmd -f -o tpm -g tpm
+
+[Install]
+WantedBy=default.target
